@@ -1,15 +1,22 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx
-  namespace: website
+  labels:
+    app: website
+  name: website
 spec:
-  replicas: 3
+  replicas: 1
+  selector:
+    matchLabels:
+      app: website
+  strategy: {}
   template:
     metadata:
       labels:
-        editor: vscode
+        app: website
     spec:
       containers:
-      - name: nginx
-        image: nginx:latest
+      - image: nginx:latest
+        name: nginx
+        resources: {}
+status: {}
