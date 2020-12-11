@@ -4,6 +4,7 @@ metadata:
   labels:
     app: website
   name: website
+  namespace: website
 spec:
   replicas: 1
   selector:
