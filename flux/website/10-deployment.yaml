@@ -6,7 +6,7 @@ metadata:
   name: website
   namespace: website
 spec:
-  replicas: 1
+  replicas: abc
   selector:
     matchLabels:
       app: website
